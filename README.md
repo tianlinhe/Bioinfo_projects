@@ -25,6 +25,10 @@ The python file "week2_wloop.py":
 4. It loops over window sizes from 1 to 23
 5. For each window size, it tests them with linear SVM at cv = 5, and records the accuracy scores for comparison
 
+The python file "decision_tree.py":
+1. It reads "svml_win13.txt"
+2. It scores using a simple decision tree at cv = 5
+
 
 The text files ending with "pssm":
 Those are pssm files generated from psi-blast of the my entire dataset aganist uniref50.
