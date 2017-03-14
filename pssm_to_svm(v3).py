@@ -56,4 +56,4 @@ def pssm_to_svm(win, file_input, svml_output):
             for i in range(len(labellist)):
                 f2.write(str(labellist[i]) + " " + str(" ".join(svml_outsidelist[i])) + "\n")
 
-pssm_to_svm(13, "buried_exposed.3line.txt","svml_win13.txt")
+pssm_to_svm(13, "buried_exposed_beta.3line.txt","svml_win13.txt")
