@@ -14,15 +14,16 @@ The python file"pssm_to_svm(v3).py":
 4. The window size used here is 13. By seting win = 13, a file name "svml_win13.txt" will be generated
 
 The python file "final_predictor.py":
-1. Using load_svm_light_file, it takes up "svml_win13.txt" as training set ("svml_win13.txt" is too large to be uploaded to Github)
+0. In order to run "final_predictor", you need to first generate "svml_win13.txt" by running "pssm_to_scm(v3).py" ("svml_win13.txt" is too large to be uploaded to Github)
+1. Using load_svm_light_file, it takes up "svml_win13.txt" as training set 
 2. Random forrest classifier is used, with no.estimator set as 35
 3. It is equiped with a simple user-iterative surface: When a user types in an amino acid query sequence (must be capitalized), it returns the 2-state prediction of the query sequence. Otherwise, it can also be done through directly typing the query sequence on line 8 of the script inside the quotation marks.
 
 The python file "week2_wloop.py":
 1. It reads the sequences of raw data from "Buried_exposed_beta.3line.txt"
-2. It converts the amino acid into binary labels in list
-3. It converts "B" to 0 and "E" to 1
-4. It loops over window sizes from 1 to 23
+2. It converts the amino acid features into binary codes in list
+3. It converts labels "B" to 0 and "E" to 1
+4. It loops over window sizes from 1 to 23, odd number only
 5. For each window size, it tests them with linear SVM at cv = 5, and records the accuracy scores for comparison
 
 The python file "decision_tree.py":
